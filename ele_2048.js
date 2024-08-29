@@ -4,7 +4,7 @@
  * 依赖：moment md5
  */
 
-const $new Env('饿了么2048')
+const $new Env('饿了么2048');
 const {
   getToken
   sign
