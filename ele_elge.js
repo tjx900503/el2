@@ -1,64 +1,71 @@
+/**
+ * 定时随意，每天跑一遍就可以
+ * cron: 7 17 * * *
+ */
+
+const $new('饿了么饿了个饿')
+
 const {
-  sign,
-  getToken,
-  checkCk,
-  getCookies,
-  getUserInfo,
-  validateCarmeWithType,
-  checkCarmeCount,
-  tryCatchPromise,
+  sign
+  getToken
+  checkCk
+  getCookies
+  getUserInfo
+  validateCarmeWithType
+  checkCarmeCount
+  tryCatchPromise
   wait
-} = require("./common.js");
+}require("./common.js")
 
-const request = require("request");
+const requestrequire("request")
 
-const GAME_TYEP = 17;
-const kami = process.env.ELE_CARME;
+const GAME_TYEP17
+const kamienvELE_CARME
 
 async function query_task(_0x26773f) {
-  const _0x34f3dc = {
-    cookie: _0x26773f,
-    "user-agent": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
-  };
-  const _0x460579 = {
-    missionCollectionId: "532",
-    locationInfos: "[\"{\\\"lng\\\":120.21287675946951,\\\"lat\\\":30.182377863675356,\\\"city\\\":\\\"330100\\\"}\"]"
-  };
+  const _0x34f3dc{
+    cookie
+    "user-agent""Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
+  }
+  const _0x460579{
+"532"
+"[{lng:120.21287675946951,lat:30.182377863675356,city:330100}]"
+  }
 
-  const _0x317943 = new Date().getTime();
+  const _0x317943new()getTime()
 
-  const _0x2ae10d = 12574478;
+  const _0x2ae10d12574478
 
-  var _0x4462bf = "data=" + encodeURIComponent(JSON.stringify(_0x460579));
+  var _0x4462bf"data="encodeURIComponent(stringify())
 
-  const _0x2644e3 = getToken(_0x26773f),
-        _0x48c5a8 = _0x2644e3.split("_")[0];
+  const _0x2644e3getToken()
+        _0x48c5a8split("_")[0]
 
-  const _0x1552ef = await sign(_0x48c5a8 + "&" + _0x317943 + "&" + _0x2ae10d + "&" + JSON.stringify(_0x460579), kami);
+  const _0x1552efawait sign("&""""stringify())
 
-  const _0x1da7ab = {
-    url: "https://mtop.ele.me/h5/mtop.ele.biz.growth.task.core.querytask/1.0/?jsv=2.6.1&appKey=12574478&t=" + _0x317943 + "&sign=" + _0x1552ef + "&api=mtop.ele.biz.growth.task.core.querytask&v=1.0&type=originaljson&dataType=json&timeout=5000&pageDomain=ele.me&ttid=1601274958480%40eleme_android_10.14.3",
-    method: "GET",
-    headers: _0x34f3dc,
-    body: _0x4462bf
-  };
-  return tryCatchPromise(_0xd60a06 => {
-    request(_0x1da7ab, async (_0x300c1a, _0x21ba06, _0x40a948) => {
-      if (!_0x300c1a && _0x21ba06.statusCode == 200) {
+  const _0x1da7ab{
+"https://mtop.ele.me/h5/mtop.ele.biz.growth.task.core.querytask/1.0/?jsv=2.6.1&appKey=12574478&t=""&sign=""&api=mtop.ele.biz.growth.task.core.querytask&v=1.0&type=originaljson&dataType=json&timeout=5000&pageDomain=ele.me&ttid=1601274958480%40eleme_android_10.14.3"
+"GET"
+    headers
+    body
+  }
+  return tryCatchPromise({
+    request(async (){
+      if () {
         try {
-          const _0x1cd03f = JSON.parse(_0x40a948);
+          const()
 
-          const _0x4a534f = _0x1cd03f.data.mlist;
+          const
 
-          _0xd60a06(_0x4a534f);
+          _0xd60a06()
         } catch (_0x2d4e63) {
-          console.log(_0x40a948);
+log()
         }
       } else {
-        _0xd60a06(null);
+        _0xd60a06(null)
       }
-    });
-  });
+    })
+  })
 }
 
 async function receive_yx_prize(_0x38f0c9, _0x905f0f, _0x7f9d6c, _0x277ffd, _0x22f890, _0x47d2ce, _0x8d06b4) {
