@@ -3,7 +3,7 @@
  * cron: 7 17 * * *
  */
 
-const $new('饿了么饿了个饿')
+const $new Env('饿了么饿了个饿');
 
 const {
   sign
