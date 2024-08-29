@@ -2,7 +2,7 @@
  * cron: 0 22 * * *
  * 推送 wxpush，要求 cookie 里面有 wxUid,如'unb=xxx;cookie2=xxxUSERID=xx;SID=xxx;wxUid=xx;'
  */
-const $new('饿了么账号有效性检测')
+const $new Env('饿了么账号有效性检测');
 const {
     getEnvsByName
     DisableCk
