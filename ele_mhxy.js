@@ -1,66 +1,68 @@
 /**
  * 变量：elmck: 必填，账号cookie
- * cron 1 0,6,12,18,21 * * *
+ * cron: 1 0,6,12,18,21 * * *
  * 需要手动玩到四级才能跑
  */
 
+const $new('饿了么梦幻小院')
+
 const {
-    "getToken": getToken,
-    "tryCatchPromise": tryCatchPromise,
-    "getCookies": getCookies,
-    "checkCk": checkCk,
-    "getUserInfo": getUserInfo,
-    "wait": wait
-} = require("./common.js");
-const _0xd960c1 = require("request");
-const md5 = require("md5");
-let _0x244760 = 1;
-let _0x22b780;
+    "getToken"
+    "tryCatchPromise"
+    "getCookies"
+    "checkCk"
+    "getUserInfo"
+    "wait"
+}require("./common.js")
+const _0xd960c1require("request")
+const md5require("md5")
+let _0x2447601
+let _0x22b780
 async function _0x1d5d09(_0x37366f) {
-    const _0x309187 = {
-        "bizScene": "ELEME_ELMYLY",
-        "instance": "INNER"
-    };
-    let _0x495e7d = await _0x768dee("mtop.alsc.playgame.common.real.name.authentication", _0x37366f, _0x309187);
-    return _0x495e7d["authentication"];
+    const _0x309187{
+        "bizScene""ELEME_ELMYLY"
+        "instance""INNER"
+    }
+    let _0x495e7dawait _0x768dee("mtop.alsc.playgame.common.real.name.authentication")
+    return["authentication"]
 }
 async function _0x2eb09b(_0x4dbdaf) {
-    const _0x1851a7 = new Date()["getTime"]();
-    const _0x34e39f = {
-        "body": "{\"nickname\":\"普通玩家\",\"avatar\":\"998d3ad143b581e8f2a3866c1f8a783cjpeg\",\"inviterId\":\"\",\"inviterType\":0,\"shareTime\":0,\"debug\":null,\"reqIdx\":" + _0x244760 + ",\"targetServer\":\"onlineB\",\"clientVersion\":\"v1.5.4\"}",
-        "headers": "{\"content-type\":\"application/json;charset=UTF-8\"}",
-        "instance": "INNER",
-        "method": "POST",
-        "options": "{\"cloudAppId\":\"47442\",\"timeout\":3000}",
-        "path": "/api/role/login",
-        "protocols": "{\"Content-Type\":\"application/json\",\"mc-timestamp\":\"" + _0x1851a7 + "\",\"mc-env\":\"online\",\"mc-network\":\"WIFI\"}"
-    };
-    let _0x4f8b6c = await _0x768dee("mtop.miniapp.cloud.application.request", _0x4dbdaf, _0x34e39f);
-    if (_0x4f8b6c) {
-        return _0x4f8b6c["data"];
+    const _0x1851a7new()["getTime"]()
+    const _0x34e39f{
+        "body""{nickname:普通玩家,avatar:998d3ad143b581e8f2a3866c1f8a783cjpeg,inviterId:,inviterType:0,shareTime:0,debug:null,reqIdx:"",targetServer:onlineB,clientVersion:v1.5.4}"
+        "headers""{content-type:application/json;charset=UTF-8}"
+        "instance""INNER"
+        "method""POST"
+        "options""{cloudAppId:47442,timeout:3000}"
+        "path""/api/role/login"
+        "protocols""{Content-Type:application/json,mc-timestamp:"",mc-env:online,mc-network:WIFI}"
     }
-    return null;
+    let _0x4f8b6cawait _0x768dee("mtop.miniapp.cloud.application.request")
+    if () {
+        return["data"]
+    }
+    return null
 }
 async function _0xe6e63a(_0x3659dc) {
-    const _0x239196 = new Date()["getTime"]();
+    const _0x239196new()["getTime"]()
     _0x244760++;
-    const _0x4411d4 = {
-        "body": "{\"reqIdx\":" + _0x244760 + ",\"gameId\":\"" + _0x1b7a8d + "\",\"token\":\"" + _0x35bf66 + "\",\"targetServer\":\"onlineB\",\"clientVersion\":\"v1.5.4\"}",
-        "headers": "{\"content-type\":\"application/json;charset=UTF-8\"}",
-        "instance": "INNER",
-        "method": "POST",
-        "options": "{\"cloudAppId\":\"47442\",\"timeout\":3000}",
-        "path": "/onlineB/api/game/getAllOpenActivityInfo",
-        "protocols": "{\"Content-Type\":\"application/json\",\"mc-timestamp\":\"" + _0x239196 + "\",\"mc-env\":\"online\",\"mc-network\":\"WIFI\"}"
-    };
-    return await _0x768dee("mtop.miniapp.cloud.application.request", _0x3659dc, _0x4411d4);
+    const _0x4411d4{
+        "body""{reqIdx:"",gameId:"",token:"",targetServer:onlineB,clientVersion:v1.5.4}"
+        "headers""{content-type:application/json;charset=UTF-8}"
+        "instance""INNER"
+        "method""POST"
+        "options""{cloudAppId:47442,timeout:3000}"
+        "path""/onlineB/api/game/getAllOpenActivityInfo"
+        "protocols""{Content-Type:application/json,mc-timestamp:"",mc-env:online,mc-network:WIFI}"
+    }
+    return await _0x768dee("mtop.miniapp.cloud.application.request")
 }
-async function _0x54ec17(_0x27230d, _0x115188, _0x59c4d3, _0x1a1549 = 1014, _0x244913) {
-    const _0x1b43f3 = new Date()["getTime"]();
+async function _0x54ec17(_0x27230d_0x115188_0x59c4d3_0x1a15491014_0x244913) {
+    const _0x1b43f3new()["getTime"]()
     _0x244760++;
-    const _0x5ecf44 = {
-        "body": "{\"orderQueryId\":\"" + _0x115188 + "\",\"posArray\":" + JSON["stringify"](_0x59c4d3) + ",\"customerId\":\"" + _0x1a1549 + "\",\"type\":" + _0x244913 + ",\"reqIdx\":" + _0x244760 + ",\"gameId\":\"" + _0x1b7a8d + "\",\"token\":\"" + _0x35bf66 + "\",\"targetServer\":\"onlineB\",\"clientVersion\":\"v1.5.4\"}",
-        "headers": "{\"content-type\":\"application/json;charset=UTF-8\"}",
+    const _0x5ecf44{
+        "body""{orderQueryId:"",posArray:"["stringify"]()",customerId:"",type:"",reqIdx:"",gameId:"",token:"",targetServer:onlineB,clientVersion:v1.5.4}"
+        "headers""{content-type:application/json;charset=UTF-8}"
         "instance": "INNER",
         "method": "POST",
         "options": "{\"cloudAppId\":\"47442\",\"timeout\":3000}",
