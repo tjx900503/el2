@@ -3,7 +3,7 @@
  * cron: 25 0,8,10,14,18,22 * * *
  */
 
-const $new('饿了么美食摊')
+const $new Env('饿了么美食摊');
 const {
     getToken
     sign
