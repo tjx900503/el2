@@ -5,7 +5,7 @@
  * 定时随意，每天跑一遍就可以
  * cron: 7 6 * * *
  */
-const $new('饿了么天天赚现金')
+const $new Env('饿了么天天赚现金');
 const {
   sign
   getToken
