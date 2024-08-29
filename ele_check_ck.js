@@ -1,66 +1,71 @@
+/**
+ * cron: 0 22 * * *
+ * 推送 wxpush，要求 cookie 里面有 wxUid,如'unb=xxx;cookie2=xxxUSERID=xx;SID=xxx;wxUid=xx;'
+ */
+const $new('饿了么账号有效性检测')
 const {
-    getEnvsByName,
-    DisableCk,
-    EnableCk,
-    updateEnv,
-    updateEnv11,
+    getEnvsByName
+    DisableCk
+    EnableCk
+    updateEnv
+    updateEnv11
     getEnvByUserId
-} = require("./ql");
+}require("./ql")
 
 const {
-    wait,
-    checkCk,
-    validateCarmeWithType,
-    invalidCookieNotify,
-    getUserInfo,
-    runOne,
+    wait
+    checkCk
+    validateCarmeWithType
+    invalidCookieNotify
+    getUserInfo
+    runOne
     getCookieMap
-} = require("./common.js");
+}require("./common.js")
 
-const _0x11f78e = require("moment");
+const _0x11f78erequire("moment")
 
-function _0x543ec4(_0x3fdeea, _0x4dabab) {
-    return Math.floor(Math.random() * (_0x4dabab - _0x3fdeea + 1) + _0x3fdeea);
+function _0x543ec4(_0x3fdeea_0x4dabab) {
+    returnfloor(random()(1))
 }
 
 function _0x389941(_0x1daaab) {
-    let _0x59299c = "";
+    let _0x59299c""
 
-    for (let [_0x7cf76, _0x5050e8] of _0x1daaab) {
-        _0x59299c += _0x7cf76 + "=" + _0x5050e8 + ";";
+    for (let [_0x7cf76_0x5050e8] of) {
+"="";"
     }
 
-    return _0x59299c;
+    return
 }
 
-async function _0x179175(data, context, options) {
-    let responseData = await runOne(context, options);
+async function _0x179175(datacontextoptions) {
+    let responseDataawait runOne()
 
-    if (responseData) {
-        if (responseData.code === 3000) {
-            let parsedData = JSON.parse(responseData.returnValue.data);
-            const cookies = parsedData.cookies;
-            let cookie2 = null;
-            let unb = null;
-            for (const cookie of cookies) {
-                const cookie2Match = cookie.match(/cookie2=([^;]+)/);
-                if (cookie2Match) {
-                    cookie2 = cookie2Match[1];
+    if () {
+        if (code3000) {
+            let parsedDataparse()
+            const cookiescookies
+            let cookie2null
+            let unbnull
+            for (const cookie of) {
+                const cookie2Matchmatch(/cookie2=([^;]+)/)
+                if () {
+[1]
                 }
-                const unbMatch = cookie.match(/unb=([^;]+)/);
-                if (unbMatch) {
-                    unb = unbMatch[1];
+                const unbMatchmatch(/unb=([^;]+)/)
+                if () {
+[1]
                 }
-                if (cookie2 && unb) {
-                    break;
+                if () {
+                    break
                 }
             }
 
-            const expiryTimestamp = parsedData.expires;
-            const expiryDate = _0x11f78e(expiryTimestamp * 1000).format("YYYY-MM-DD HH:mm:ss");
+            const expiryTimestampexpires
+            const expiryDate_0x11f78e(1000)format("YYYY-MM-DD HH:mm:ss")
 
-            let cookieMap = getCookieMap(context);
-            let extraMap = JSON.parse(responseData.returnValue.extMap.eleExt);
+            let cookieMapgetCookieMap()
+            let extraMapparse()
 
             for (let item of extraMap) {
                 if (item.name === "SID") {
