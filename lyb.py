@@ -1,3 +1,9 @@
+/**
+ * 变量：elmck: 必填，账号cookie
+ * cron: 7 0,6,12,18,22 * * *
+ * 修复连连看
+ */
+const $new('饿了么乐园币')
 import hashlib
 import os
 import time
