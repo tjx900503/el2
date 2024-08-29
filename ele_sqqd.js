@@ -3,7 +3,7 @@
  * cron: 11 10 * * *
  * 默认延时 30 秒执行下一个账号，可以通过设置 export sq_wait_time=30 来修改延时时间
  */
-const $new('饿了么社群签到')
+const $new Env('饿了么社群签到');
 const requestrequire("request")
       {
   getToken
