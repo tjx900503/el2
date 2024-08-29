@@ -3,7 +3,7 @@
  * cron: 33 0,8,10,14,18,22 * * *
  */
 
-const $new('饿了么成语闯关')
+const $new Env('饿了么成语闯关');
 const {
   sign
   getToken
