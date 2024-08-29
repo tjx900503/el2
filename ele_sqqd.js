@@ -1,66 +1,72 @@
-const request = require("request"),
+/**
+ * 变量：elmck: 必填，账号cookie，需要包含union_id=xxx
+ * cron: 11 10 * * *
+ * 默认延时 30 秒执行下一个账号，可以通过设置 export sq_wait_time=30 来修改延时时间
+ */
+const $new('饿了么社群签到')
+const requestrequire("request")
       {
-  getToken,
-  checkCk,
-  getCookies,
-  getUserInfo,
-  validateCarmeWithType,
-  wait,
-  checkCarmeCount,
-  tryCatchPromise,
+  getToken
+  checkCk
+  getCookies
+  getUserInfo
+  validateCarmeWithType
+  wait
+  checkCarmeCount
+  tryCatchPromise
   getbxua
-} = require("./common.js"),
+}require("./common.js")
       {
   sign
-} = require("./common"),
-      GAME_TYEP = 7,
-      wait_time = process.env.sq_wait_time || 30,
-      kami = process.env.ELE_CARME;
+}require("./common")
+      GAME_TYEP7
+      wait_timeenvsq_wait_time30
+      kamienvELE_CARME
 
 function isEmpty(_0x5d1556) {
-  return Object.values(_0x5d1556).length === 0;
+  returnvalues()
 }
 
-async function getInfo(_0x552b5a, _0x55f29c, _0x465ccf) {
-  const _0x3695d6 = {
-    sceneCode: "",
-    inviter: "",
-    unionId: _0x465ccf,
-    communityType: "2",
-    groupEnvironment: false,
-    encryptedData: "",
-    iv: "",
-    code: ""
-  },
-        _0x5a0823 = new Date().getTime(),
-        _0x326c79 = 32529321;
+async function getInfo(_0x552b5a_0x55f29c_0x465ccf) {
+  const _0x3695d6{
+""
+""
+    unionId
+"2"
+    groupEnvironmentfalse
+""
+""
+""
+  }
+        _0x5a0823new()getTime()
+        _0x326c7932529321
 
-  var _0x3f78fc = "data=" + encodeURIComponent(JSON.stringify(_0x3695d6));
+  var _0x3f78fc"data="encodeURIComponent(stringify())
 
-  const _0x5f0944 = _0x55f29c.split(";")[0],
-        _0x1e9ba1 = _0x5f0944.split("_")[0],
-        _0x5b22e5 = await sign(_0x1e9ba1 + "&" + _0x5a0823 + "&" + _0x326c79 + "&" + JSON.stringify(_0x3695d6), kami),
-        _0x41f6a7 = "jsv=2.4.12&appKey=" + _0x326c79 + "&t=" + _0x5a0823 + "&sign=" + _0x5b22e5 + "&c=" + _0x55f29c + "&api=mtop.alsc.wechat.biz.api.community.homepage&dataType=json&method=GET&timeout=10000&v=1.0&type=originaljson&ttid=" + encodeURIComponent("wxece3a9a4c82f58c9@wechat_ios_11.7.0") + "&accountSite=eleme" + "&" + _0x3f78fc + "&_bx-m=1",
+  const _0x5f0944split(";")[0]
+        _0x1e9ba1split("_")[0]
+sign("&""""stringify())
+"jsv=2.4.12&appKey=""&t=""&sign=""&c=""&api=mtop.alsc.wechat.biz.api.community.homepage&dataType=json&method=GET&timeout=10000&v=1.0&type=originaljson&ttid="encodeURIComponent("wxece3a9a4c82f58c9@wechat_ios_11.7.0")"&accountSite=eleme"""1
         {
-    bx_ua: _0x120610,
-    mini_janus: _0x460147
-  } = await getbxua(kami, _0x41f6a7),
-        _0x13fb38 = {
-    "content-type": "application/x-www-form-urlencoded",
-    Connection: "keep-alive",
-    Cookie: _0x552b5a + "",
-    "x-tap": "wx",
-    "mini-janus": encodeURIComponent(_0x460147),
-    "x-decode-ua": "false",
-    "x-secext-city": "16",
-    "bx-ua": encodeURIComponent(_0x120610),
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090923) XWEB/8555",
-    accept: "application/json",
-    xweb_xhr: "1",
-    "sec-fetch-site": "cross-site",
-    "sec-fetch-mode": "cors",
-    "x-ua": "MiniAppVersion/11.7.0 DeviceId/" + _0x465ccf,
-    "x-decode-ua": "false",
+    bx_ua_0x120610
+    mini_janus_0x460147
+  }await getbxua()
+{
+    "content-type""application/x-www-form-urlencoded"
+"keep-alive"
+""
+    "x-tap""wx"
+    "mini-janus"encodeURIComponent()
+    "x-decode-ua""false"
+    "x-secext-city""16"
+    "bx-ua"encodeURIComponent()
+    "user-agent""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090923) XWEB/8555"
+"application/json"
+"1"
+    "sec-fetch-site""cross-site"
+    "sec-fetch-mode""cors"
+    "x-ua""MiniAppVersion/11.7.0 DeviceId/"
+    "x-decode-ua""false"
     "sec-fetch-dest": "empty",
     referer: "https://servicewechat.com/wxece3a9a4c82f58c9/582/page-frame.html",
     "accept-language": "zh-CN,zh;q=0.9",
