@@ -1,66 +1,72 @@
+/**
+ * 变量：elmck: 必填，账号cookie
+ * cron: 52 0,8,10,14,18,22 * * *
+ */
+
+const $new('饿了么合成甜蜜蜜')
 const {
-  sign,
-  getToken,
-  checkCk,
-  getCookies,
-  getUserInfo,
-  wait,
+  sign
+  getToken
+  checkCk
+  getCookies
+  getUserInfo
+  wait
   checkCarmeCount
-} = require("./common.js");
+}require("./common.js")
 
-const request = require("request");
+const requestrequire("request")
 
 const {
-  tryCatchPromise,
+  tryCatchPromise
   validateCarmeWithType
-} = require("./common");
+}require("./common")
 
-const kami = process.env.ELE_CARME;
-const GAME_TYEP = 14;
+const kamienvELE_CARME
+const GAME_TYEP14
 
-async function pageview(_0x4ee77b, _0x3c1018, _0x92595d, _0x1b4697) {
-  const _0x1e54d8 = {
-    authority: "shopping.ele.me",
-    accept: "application/json",
-    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-    "cache-control": "no-cache",
-    "content-type": "application/x-www-form-urlencoded",
-    origin: "https://r.ele.me",
-    pragma: "no-cache",
-    referer: "https://r.ele.me/linkgame/index.html?navType=3&spm-pre=a2ogi.13162730.zebra-ele-login-module-9089118186&spm=a13.b_activity_kb_m71293.0.0",
-    cookie: _0x4ee77b,
-    "x-ele-ua": "RenderWay/H5 AppName/wap Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36",
-    "user-agent": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
-  };
-  const _0x43daf4 = {
-    collectionId: _0x92595d,
-    missionId: _0x1b4697,
-    actionCode: "PAGEVIEW",
-    pageFrom: _0x3c1018,
-    viewTime: "15",
-    bizScene: "FOOD_ELIMINATE",
-    accountPlan: "HAVANA_COMMON",
-    sync: "false"
-  };
+async function pageview(_0x4ee77b_0x3c1018_0x92595d_0x1b4697) {
+  const _0x1e54d8{
+"shopping.ele.me"
+"application/json"
+    "accept-language""zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
+    "cache-control""no-cache"
+    "content-type""application/x-www-form-urlencoded"
+"https://r.ele.me"
+"no-cache"
+"https://r.ele.me/linkgame/index.html?navType=3&spm-pre=a2ogi.13162730.zebra-ele-login-module-9089118186&spm=a13.b_activity_kb_m71293.0.0"
+    cookie
+    "x-ele-ua""RenderWay/H5 AppName/wap Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
+    "user-agent""Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
+  }
+  const _0x43daf4{
+    collectionId
+    missionId
+"PAGEVIEW"
+    pageFrom
+"15"
+"FOOD_ELIMINATE"
+"HAVANA_COMMON"
+"false"
+  }
 
-  const _0x1302e2 = new Date().getTime();
+  const _0x1302e2new()getTime()
 
-  const _0x42f860 = 12574478;
+  const _0x42f86012574478
 
-  var _0x4c1b86 = "data=" + encodeURIComponent(JSON.stringify(_0x43daf4));
+  var _0x4c1b86"data="encodeURIComponent(stringify())
 
-  const _0x4a8da5 = getToken(_0x4ee77b),
-        _0x1c1413 = _0x4a8da5.split("_")[0];
+  const _0x4a8da5getToken()
+        _0x1c1413split("_")[0]
 
-  const _0x537a00 = await sign(_0x1c1413 + "&" + _0x1302e2 + "&" + _0x42f860 + "&" + JSON.stringify(_0x43daf4), kami);
+  const _0x537a00await sign("&""""stringify())
 
-  const _0x859450 = {
-    url: "https://shopping.ele.me/h5/mtop.ele.biz.growth.task.event.pageview/1.0/?jsv=2.6.1&appKey=12574478&t=" + _0x1302e2 + "&sign=" + _0x537a00 + "&api=mtop.ele.biz.growth.task.event.pageview&v=1.0&type=originaljson&dataType=json",
-    method: "POST",
-    headers: _0x1e54d8,
-    body: _0x4c1b86
-  };
-  return tryCatchPromise(_0x74629e => {
+  const _0x859450{
+"https://shopping.ele.me/h5/mtop.ele.biz.growth.task.event.pageview/1.0/?jsv=2.6.1&appKey=12574478&t=""&sign=""&api=mtop.ele.biz.growth.task.event.pageview&v=1.0&type=originaljson&dataType=json"
+"POST"
+    headers
+    body
+  }
+  return tryCatchPromise({
     request(_0x859450, async (_0x5276b3, _0x44dd3f, _0x1b4ea3) => {
       if (!_0x5276b3 && _0x44dd3f.statusCode == 200) {
         const _0x545f23 = JSON.parse(_0x1b4ea3);
