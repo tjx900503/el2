@@ -3,7 +3,7 @@
  * cron: 7 0,6,12,18,22 * * *
  * 修复连连看
  */
-const $new('饿了么乐园币')
+const $new Env('饿了么乐园币');
 const {
     "getToken"
     "checkCk"
