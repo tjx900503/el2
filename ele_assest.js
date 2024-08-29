@@ -2,7 +2,7 @@
 cron: 0 8,16,23 * * *
 设置 ele_sendNotify.js WX_PUSH_TOKEN
 */
-const $new('饿了么资产推送')
+const $new Env('饿了么资产推送');
 const {
   sign
   getToken
