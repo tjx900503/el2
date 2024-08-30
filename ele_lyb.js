@@ -1,68 +1,68 @@
 /**
  * 变量：elmck: 必填，账号cookie
- * cron: 7 6,12 * * *
+ * cron: 7 0,6,12,18,22 * * *
  * 修复连连看
  */
-const $new Env('饿了么乐园币');
+
 const {
-    "getToken"
-    "checkCk"
-    "wait"
-    "getCookies"
-    "getUserInfo"
-    "tryCatchPromise"
-}require("sj.nommoc/."("")reverse()join(""))
+    "getToken": getToken,
+    "checkCk": checkCk,
+    "wait": wait,
+    "getCookies": getCookies,
+    "getUserInfo": getUserInfo,
+    "tryCatchPromise": tryCatchPromise
+} = require("sj.nommoc/.".split("").reverse().join(""));
 
-const requestrequire("tseuqer"("")reverse()join(""))
+const request = require("tseuqer".split("").reverse().join(""));
 
-const md5require("md5")
+const md5 = require("md5");
 
 function isEmpty (_0x591a20) {
-    return["values"]()['length']0
+    return Object["values"](_0x591a20)['length'] === 0;
 }
 
 async function lottery (_0x2a7333) {
-    const _0x37f589{
-        'authority''shopping.ele.me'
-        "accept"'application/json'
-        'accept-language'"zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
-        "cache-control""no-cache"
-        'content-type''application/x-www-form-urlencoded'
-        'origin''https://r.ele.me'
-        'pragma'"no-cache"
-        "referer""https://r.ele.me/linkgame/index.html?navType=3&spm-pre=a2ogi.13162730.zebra-ele-login-module-9089118186&spm=a13.b_activity_kb_m71293.0.0"
-        'cookie'
-        "x-ele-ua""RenderWay/H5 AppName/wap Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
-        "user-agent""Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
-    }
-    const _0x47799a{
-        "actId"'20221207144029906162546384'
-        'collectionId''20230224114656384938530468'
-        "componentId""20230224114825216373367998"
-        "bizScene"'game_center'
-        'bizCode'"LOTTERY"
-        'longitude''120.21993197500706'
-        "latitude"'30.178378857672215'
-        'asac''2A232091VOX6SPEQYH6RG4'
-        "extParams""{bizType:LOTTERY}"
-    }
+    const _0x37f589 = {
+        'authority': 'shopping.ele.me',
+        "accept": 'application/json',
+        'accept-language': "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "no-cache",
+        'content-type': 'application/x-www-form-urlencoded',
+        'origin': 'https://r.ele.me',
+        'pragma': "no-cache",
+        "referer": "https://r.ele.me/linkgame/index.html?navType=3&spm-pre=a2ogi.13162730.zebra-ele-login-module-9089118186&spm=a13.b_activity_kb_m71293.0.0",
+        'cookie': _0x2a7333,
+        "x-ele-ua": "RenderWay/H5 AppName/wap Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36",
+        "user-agent": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
+    };
+    const _0x47799a = {
+        "actId": '20221207144029906162546384',
+        'collectionId': '20230224114656384938530468',
+        "componentId": "20230224114825216373367998",
+        "bizScene": 'game_center',
+        'bizCode': "LOTTERY",
+        'longitude': '120.21993197500706',
+        "latitude": '30.178378857672215',
+        'asac': '2A232091VOX6SPEQYH6RG4',
+        "extParams": "{\"bizType\":\"LOTTERY\"}"
+    };
 
-    const _0x5695eenew()["getTime"]()
+    const _0x5695ee = new Date()["getTime"]();
 
-    const _0x31593612574478
+    const _0x315936 = 12574478;
 
-    var _0x369abd"=atad"split("")reverse()join("")encodeURIComponent(['stringify']())
+    var _0x369abd = "=atad".split("").reverse().join("") + encodeURIComponent(JSON['stringify'](_0x47799a));
 
-    const _0x881d98getToken()
+    const _0x881d98 = getToken(_0x2a7333);
 
-    const _0x34e5a0['split']('_')[0]
+    const _0x34e5a0 = _0x881d98['split']('_')[0];
 
-    const _0x26d75amd5("&"['']())
+    const _0x26d75a = md5(_0x34e5a0 + "&" + _0x5695ee + '&' + _0x315936 + '&' + JSON['stringify'](_0x47799a));
 
-    const _0x43bb72{
-        "url""=t&87447521=yeKppa&1.6.2=vsj?/0.1/yrettol.thgir.mroftalp.retnecnoitcaretni.iebuok.potm/5h/moc.oaboat.m.sca-ediug//:sptth"split("")reverse()join("")"&sign=""nosj=epyTatad&nosjlanigiro=epyt&0.1=v&yrettol.thgir.mroftalp.retnecnoitcaretni.iebuok.potm=ipa&"split("")reverse()join("")
-        'method''POST'
-        'headers'
+    const _0x43bb72 = {
+        "url": "=t&87447521=yeKppa&1.6.2=vsj?/0.1/yrettol.thgir.mroftalp.retnecnoitcaretni.iebuok.potm/5h/moc.oaboat.m.sca-ediug//:sptth".split("").reverse().join("") + _0x5695ee + "&sign=" + _0x26d75a + "nosj=epyTatad&nosjlanigiro=epyt&0.1=v&yrettol.thgir.mroftalp.retnecnoitcaretni.iebuok.potm=ipa&".split("").reverse().join(""),
+        'method': 'POST',
+        'headers': _0x37f589,
         "body": _0x369abd
     };
     return tryCatchPromise(_0x51ba78 => {

@@ -2,70 +2,69 @@
 cron: 0 8,16,23 * * *
 设置 ele_sendNotify.js WX_PUSH_TOKEN
 */
-const $new Env('饿了么资产推送');
 const {
-  sign
-  getToken
-  wait
-  checkCk
-  validateCarmeWithType
-  User_Agent
-  getCookies
-  checkCarmeCount
-  getUserInfo
-  tryCatchPromise
+  sign,
+  getToken,
+  wait,
+  checkCk,
+  validateCarmeWithType,
+  User_Agent,
+  getCookies,
+  checkCarmeCount,
+  getUserInfo,
+  tryCatchPromise,
   getCookieMap
-}require("./common.js")
+} = require("./common.js");
 
 const {
   sendNotify
-}require("./sendNotify1.js")
+} = require("./sendNotify1.js");
 
-const _0x3ee842require("moment")
+const _0x3ee842 = require("moment");
 
-const _0x43a291require("request")
+const _0x43a291 = require("request");
 
-const _0xf58a1910
-const _0x55733f"异常"
+const _0xf58a19 = 10;
+const _0x55733f = "异常";
 
-let _0x31839agetCookies()
+let _0x31839a = getCookies();
 
-const _0x46e8aeenvELE_CARME
-var _0x2c5f85"| 昵称          | 乐园币    | 总吃货豆 |余额 || ------------- | ------------------ | ---------|---------|"
+const _0x46e8ae = process.env.ELE_CARME;
+var _0x2c5f85 = "| 昵称          | 乐园币    | 总吃货豆 |余额 |\n| ------------- | ------------------ | ---------|---------|\n";
 
 function _0x15e7a0() {
-  return _0x3ee842()format("YYYY-MM-DD")
+  return _0x3ee842().format("YYYY-MM-DD");
 }
 
 function _0x23f651() {
-  var _0x1b2b0anew()
-      _0x1344edgetMonth()1
-      _0x3be63egetDate()
+  var _0x1b2b0a = new Date(),
+      _0x1344ed = _0x1b2b0a.getMonth() + 1,
+      _0x3be63e = _0x1b2b0a.getDate();
 
-9("0")
-9("0")
-  returngetFullYear()"""
+  _0x1344ed <= 9 && (_0x1344ed = "0" + _0x1344ed);
+  _0x3be63e <= 9 && (_0x3be63e = "0" + _0x3be63e);
+  return _0x1b2b0a.getFullYear() + "-" + _0x1344ed + "-" + _0x3be63e;
 }
 
 function _0x1fb425(_0x1a7133) {
-  const _0x879662{
-"https://httpizza.ele.me/walletUserV2/storedcard/queryBalanceBycardType?cardType=platform"
-{}
-  }
-headersCookie
-["User-Agent"]
-"https://r.ele.me/alsc-wallet/home.html?channel=grzx"
-  return tryCatchPromise({
-    _0x43a291(async (){
-      if () {
-        const()
+  const _0x879662 = {
+    url: "https://httpizza.ele.me/walletUserV2/storedcard/queryBalanceBycardType?cardType=platform",
+    headers: {}
+  };
+  _0x879662.headers.Cookie = _0x1a7133;
+  _0x879662.headers["User-Agent"] = User_Agent;
+  _0x879662.headers.referer = "https://r.ele.me/alsc-wallet/home.html?channel=grzx";
+  return tryCatchPromise(_0x171e05 => {
+    _0x43a291(_0x879662, async (_0x3c1e94, _0x7b3e1d, _0x1d7b01) => {
+      if (!_0x3c1e94 && _0x7b3e1d.statusCode == 200) {
+        const _0x1c177e = JSON.parse(_0x1d7b01);
 
         try {
-          _0x171e05()
+          _0x171e05(_0x1c177e.data.totalAmount);
         } catch (_0x22658b) {
-log()
+          console.log(_0x1d7b01);
 
-          _0x171e05(null)
+          _0x171e05(null);
         }
       } else {
         _0x171e05(null);

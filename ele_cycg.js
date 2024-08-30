@@ -1,72 +1,72 @@
+
 /**
  * 变量：elmck: 必填，账号cookie
  * cron: 33 8,14 * * *
  */
 
-const $new Env('饿了么成语闯关');
 const {
-  sign
-  getToken
-  wait
-  checkCk
-  getCookies
-  getUserInfo
-  validateCarmeWithType
-  checkCarmeCount
+  sign,
+  getToken,
+  wait,
+  checkCk,
+  getCookies,
+  getUserInfo,
+  validateCarmeWithType,
+  checkCarmeCount,
   tryCatchPromise
-}require("./common.js")
+} = require("./common.js");
 
-const requestrequire("request")
+const request = require("request");
 
-const GAME_TYEP5
-const kamienvELE_CARME
+const GAME_TYEP = 5;
+const kami = process.env.ELE_CARME;
 
-async function pageview(_0x164b86_0x35b682_0x3b36a8_0x41608a) {
-  const _0x39d0f6{
-"shopping.ele.me"
-"application/json"
-    "accept-language""zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
-    "cache-control""no-cache"
-    "content-type""application/x-www-form-urlencoded"
-"https://r.ele.me"
-"no-cache"
-"https://r.ele.me/linkgame/index.html?navType=3&spm-pre=a2ogi.13162730.zebra-ele-login-module-9089118186&spm=a13.b_activity_kb_m71293.0.0"
-    cookie
-    "x-ele-ua""RenderWay/H5 AppName/wap Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
-    "user-agent""Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
-  }
-  const _0x2ee09b{
-    collectionId
-    missionId
-"PAGEVIEW"
-    pageFrom
-"15"
-"IDIOM"
-"HAVANA_COMMON"
-"false"
-  }
+async function pageview(_0x164b86, _0x35b682, _0x3b36a8, _0x41608a) {
+  const _0x39d0f6 = {
+    authority: "shopping.ele.me",
+    accept: "application/json",
+    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache",
+    "content-type": "application/x-www-form-urlencoded",
+    origin: "https://r.ele.me",
+    pragma: "no-cache",
+    referer: "https://r.ele.me/linkgame/index.html?navType=3&spm-pre=a2ogi.13162730.zebra-ele-login-module-9089118186&spm=a13.b_activity_kb_m71293.0.0",
+    cookie: _0x164b86,
+    "x-ele-ua": "RenderWay/H5 AppName/wap Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36",
+    "user-agent": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36"
+  };
+  const _0x2ee09b = {
+    collectionId: _0x3b36a8,
+    missionId: _0x41608a,
+    actionCode: "PAGEVIEW",
+    pageFrom: _0x35b682,
+    viewTime: "15",
+    bizScene: "IDIOM",
+    accountPlan: "HAVANA_COMMON",
+    sync: "false"
+  };
 
-  const _0x9a78abnew()getTime()
+  const _0x9a78ab = new Date().getTime();
 
-  const _0x131df912574478
+  const _0x131df9 = 12574478;
 
-  var _0x1b9d76"data="encodeURIComponent(stringify())
+  var _0x1b9d76 = "data=" + encodeURIComponent(JSON.stringify(_0x2ee09b));
 
-  const _0x4518c3getToken()
-        _0x13235bsplit("_")[0]
+  const _0x4518c3 = getToken(_0x164b86),
+        _0x13235b = _0x4518c3.split("_")[0];
 
-  const _0x4f9868await sign("&""""stringify())
+  const _0x4f9868 = await sign(_0x13235b + "&" + _0x9a78ab + "&" + _0x131df9 + "&" + JSON.stringify(_0x2ee09b), kami);
 
-  const _0x4989d5{
-"https://shopping.ele.me/h5/mtop.ele.biz.growth.task.event.pageview/1.0/?jsv=2.6.1&appKey=12574478&t=""&sign=""&api=mtop.ele.biz.growth.task.event.pageview&v=1.0&type=originaljson&dataType=json"
-"POST"
-    headers
-    body
-  }
-  return tryCatchPromise({
-    request(async (){
-      if () {
-        const()
+  const _0x4989d5 = {
+    url: "https://shopping.ele.me/h5/mtop.ele.biz.growth.task.event.pageview/1.0/?jsv=2.6.1&appKey=12574478&t=" + _0x9a78ab + "&sign=" + _0x4f9868 + "&api=mtop.ele.biz.growth.task.event.pageview&v=1.0&type=originaljson&dataType=json",
+    method: "POST",
+    headers: _0x39d0f6,
+    body: _0x1b9d76
+  };
+  return tryCatchPromise(_0x396231 => {
+    request(_0x4989d5, async (_0x4ed9cd, _0x1ce511, _0x672dd3) => {
+      if (!_0x4ed9cd && _0x1ce511.statusCode == 200) {
+        const _0x27e5bb = JSON.parse(_0x672dd3);
 
         _0x396231(_0x27e5bb);
       } else {

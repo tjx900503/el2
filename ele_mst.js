@@ -3,70 +3,70 @@
  * cron: 25 8,14 * * *
  */
 
-const $new Env('饿了么美食摊');
+
 const {
-    getToken
-    sign
-    tryCatchPromise
-    validateCarmeWithType
-    getCookies
-    checkCk
-    getUserInfo
-    checkCarmeCount
+    getToken,
+    sign,
+    tryCatchPromise,
+    validateCarmeWithType,
+    getCookies,
+    checkCk,
+    getUserInfo,
+    checkCarmeCount,
     wait
-}require("./common")
+} = require("./common");
 
-const _0x38436e12
+const _0x38436e = 12;
 
-const _0x23dc98require("request")
+const _0x23dc98 = require("request");
 
-const _0x5c30ecenvELE_CARME
+const _0x5c30ec = process.env.ELE_CARME;
 
 async function _0x58fe79(_0x1938bb) {
-    const _0x213706new()getTime()
+    const _0x213706 = new Date().getTime();
 
-    const _0x1aea2b{
-"INNER"
-"GET"
-"{env:online}"
-"/getCertificationInfo"
-"{Content-Type:application/json,mc-timestamp:"",mc-env:online}"
-"{}"
-"1.5.4"
-    }
+    const _0x1aea2b = {
+        instance: "INNER",
+        method: "GET",
+        options: "{\"env\":\"online\"}",
+        path: "/getCertificationInfo",
+        protocols: "{\"Content-Type\":\"application/json\",\"mc-timestamp\":\"" + _0x213706 + "\",\"mc-env\":\"online\"}",
+        queryString: "{}",
+        sdkVersion: "1.5.4"
+    };
 
-    let _0x485b28await _0x2928b2()
+    let _0x485b28 = await _0x2928b2(_0x1938bb, _0x1aea2b);
 
-    returnauthentication
+    return _0x485b28.authentication;
 }
 
-async function _0x2928b2(_0x383f4c_0xcca1bd) {
-    const _0x48e431{
-"shopping.ele.me"
-"application/json"
-        "cache-control""no-cache"
-        "content-type""application/x-www-form-urlencoded"
-        cookie
-        "x-miniapp-id-taobao""3000000078920071"
-        "x-miniapp-version""0.0.116"
-        "x-mini-appkey""34190632"
-        "x-req-appkey""34190632"
-"3000000078920071"
-    }
+async function _0x2928b2(_0x383f4c, _0xcca1bd) {
+    const _0x48e431 = {
+        authority: "shopping.ele.me",
+        accept: "application/json",
+        "cache-control": "no-cache",
+        "content-type": "application/x-www-form-urlencoded",
+        cookie: _0x383f4c,
+        "x-miniapp-id-taobao": "3000000078920071",
+        "x-miniapp-version": "0.0.116",
+        "x-mini-appkey": "34190632",
+        "x-req-appkey": "34190632",
+        appid: "3000000078920071"
+    };
 
-    const _0x5b0fb1new()getTime()
+    const _0x5b0fb1 = new Date().getTime();
 
-    const _0x41c3bc34190632
+    const _0x41c3bc = 34190632;
 
-    var _0x4f1c6f"data="encodeURIComponent(stringify())
+    var _0x4f1c6f = "data=" + encodeURIComponent(JSON.stringify(_0xcca1bd));
 
-    const _0x115515getToken()
-        _0x322f91split("_")[0]
+    const _0x115515 = getToken(_0x383f4c),
+        _0x322f91 = _0x115515.split("_")[0];
 
-    const _0xe48caaawait sign("&""""stringify())
+    const _0xe48caa = await sign(_0x322f91 + "&" + _0x5b0fb1 + "&" + _0x41c3bc + "&" + JSON.stringify(_0xcca1bd), _0x5c30ec);
 
-    const _0x109901{
-"https://shopping.ele.me/h5/mtop.miniapp.cloud.application.request/1.0/?jsv=2.6.1&appKey=34190632&t=""&sign=""&api=mtop.miniapp.cloud.application.request&v=1.0&type=originaljson&ttid=1608030065155%40eleme_android_11.0.38"
+    const _0x109901 = {
+        url: "https://shopping.ele.me/h5/mtop.miniapp.cloud.application.request/1.0/?jsv=2.6.1&appKey=34190632&t=" + _0x5b0fb1 + "&sign=" + _0xe48caa + "&api=mtop.miniapp.cloud.application.request&v=1.0&type=originaljson&ttid=1608030065155%40eleme_android_11.0.38",
         method: "POST",
         headers: _0x48e431,
         body: _0x4f1c6f

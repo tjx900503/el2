@@ -3,70 +3,70 @@
  * cron: 6 8,14 * * *
  * 依赖：moment md5
  */
+const $ = new Env('饿了么2048');
 
-const $new Env('饿了么2048');
 const {
-  getToken
-  sign
-  tryCatchPromise
-  validateCarmeWithType
-  getCookies
-  checkCk
-  getUserInfo
-  checkCarmeCount
+  getToken,
+  sign,
+  tryCatchPromise,
+  validateCarmeWithType,
+  getCookies,
+  checkCk,
+  getUserInfo,
+  checkCarmeCount,
   wait
-}require("./common")
+} = require("./common");
 
-const GAME_TYEP13
+const GAME_TYEP = 13;
 
-const requestrequire("request")
+const request = require("request");
 
-const momentrequire("moment")
+const moment = require("moment");
 
-const md5require("md5")
+const md5 = require("md5");
 
-const kamienvELE_CARME
+const kami = process.env.ELE_CARME;
 
-async function gameRequest(_0x108364_0x2cb520) {
-  const _0x14ca42{
-"shopping.ele.me"
-"application/json"
-    "cache-control""no-cache"
-    "content-type""application/x-www-form-urlencoded"
-    cookie
-    "x-miniapp-id-taobao""3000000084905483"
-    "x-miniapp-version""0.0.116"
-    "x-mini-appkey""34304642"
-    "x-req-appkey""34304642"
-"3000000084905483"
-  }
+async function gameRequest(_0x108364, _0x2cb520) {
+  const _0x14ca42 = {
+    authority: "shopping.ele.me",
+    accept: "application/json",
+    "cache-control": "no-cache",
+    "content-type": "application/x-www-form-urlencoded",
+    cookie: _0x108364,
+    "x-miniapp-id-taobao": "3000000084905483",
+    "x-miniapp-version": "0.0.116",
+    "x-mini-appkey": "34304642",
+    "x-req-appkey": "34304642",
+    appid: "3000000084905483"
+  };
 
-  const _0xeda03fnew()getTime()
+  const _0xeda03f = new Date().getTime();
 
-  const _0x45614e34190632
+  const _0x45614e = 34190632;
 
-  var _0x25963c"data="encodeURIComponent(stringify())
+  var _0x25963c = "data=" + encodeURIComponent(JSON.stringify(_0x2cb520));
 
-  const _0x1fece0getToken()
-    _0x22503bsplit("_")[0]
+  const _0x1fece0 = getToken(_0x108364),
+    _0x22503b = _0x1fece0.split("_")[0];
 
-  const _0x2a5ef3await sign("&""""stringify())
+  const _0x2a5ef3 = await sign(_0x22503b + "&" + _0xeda03f + "&" + _0x45614e + "&" + JSON.stringify(_0x2cb520), kami);
 
-  const _0x92c123{
-"https://shopping.ele.me/h5/mtop.miniapp.cloud.application.request/1.0/?jsv=2.6.1&appKey=34190632&t=""&sign=""&api=mtop.miniapp.cloud.application.request&v=1.0&type=originaljson&ttid=1608030065155%40eleme_android_11.0.38"
-"POST"
-    headers
-    body
-  }
-  return tryCatchPromise({
-    request(async (){
-      if () {
+  const _0x92c123 = {
+    url: "https://shopping.ele.me/h5/mtop.miniapp.cloud.application.request/1.0/?jsv=2.6.1&appKey=34190632&t=" + _0xeda03f + "&sign=" + _0x2a5ef3 + "&api=mtop.miniapp.cloud.application.request&v=1.0&type=originaljson&ttid=1608030065155%40eleme_android_11.0.38",
+    method: "POST",
+    headers: _0x14ca42,
+    body: _0x25963c
+  };
+  return tryCatchPromise(_0x4d4d6d => {
+    request(_0x92c123, async (_0x4e0c22, _0x3dcb93, _0x11d6d9) => {
+      if (!_0x4e0c22 && _0x3dcb93.statusCode === 200) {
         try {
-          const()
+          const _0x260da4 = JSON.parse(_0x11d6d9);
 
-          _0x4d4d6d()
+          _0x4d4d6d(_0x260da4.data.data);
         } catch (_0x190c1c) {
-log()
+          console.log(_0x11d6d9);
 
           _0x4d4d6d(null);
         }

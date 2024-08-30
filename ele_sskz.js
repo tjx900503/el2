@@ -6,7 +6,6 @@
  * 2024.02.26 更新：打印错误日志；
  */
 
-const $ = new Env('饿了么食神客栈');
 const {
         validateCarmeWithType: validateCarmeWithType,
         getCookies: getCookies,

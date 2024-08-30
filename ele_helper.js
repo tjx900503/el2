@@ -5,69 +5,68 @@
  * 定时随意，每天跑一遍就可以
  * cron: 7 6 * * *
  */
-const $new Env('饿了么天天赚现金');
 const {
-  sign
-  getToken
-  wait
-  checkCk
-  validateCarmeWithType
-  User_Agent
-  getCookies
-  checkCarmeCount
-  getUserInfo
+  sign,
+  getToken,
+  wait,
+  checkCk,
+  validateCarmeWithType,
+  User_Agent,
+  getCookies,
+  checkCarmeCount,
+  getUserInfo,
   tryCatchPromise
-}require("./common.js")
+} = require("./common.js");
 
-const requestrequire("request")
+const request = require("request");
 
-const GAME_TYEP2
-let CookieElesgetCookies()
-const kamienvELE_CARME
+const GAME_TYEP = 2;
+let CookieEles = getCookies();
+const kami = process.env.ELE_CARME;
 
-async function fridensHelper(_0x44fa34_0x3ca75c) {
-await checkCk()
-  const _0x51fd6d{
-    "content-type""application/x-www-form-urlencoded;charset=UTF-8"
-    Cookie
-    "User-Agent"
-  }
+async function fridensHelper(_0x44fa34, _0x3ca75c) {
+  _0x44fa34 = await checkCk(_0x44fa34);
+  const _0x51fd6d = {
+    "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+    Cookie: _0x44fa34,
+    "User-Agent": User_Agent
+  };
 
-  const _0x9900e7new()getTime()
+  const _0x9900e7 = new Date().getTime();
 
-  const _0x4ae8f412574478
-  const _0x5f17d6{
-"RECOMMEND_SUPPORT"
-"{ownerId:"",fromOfficialAccount:false,channel:1,referUserId:,restaurantId:,referCode:,referChannelCode:,referChannelType:,fromWeChatApp:false,bizType:1,v:4.3,chInfo:ch_app_chsub_Photo,from:hjb_app_xbb,actId:1,longitude:120.22057268768549,latitude:30.17862595617771}"
-  }
+  const _0x4ae8f4 = 12574478;
+  const _0x5f17d6 = {
+    sceneCode: "RECOMMEND_SUPPORT",
+    params: "{\"ownerId\":\"" + _0x3ca75c + "\",\"fromOfficialAccount\":false,\"channel\":\"1\",\"referUserId\":\"\",\"restaurantId\":\"\",\"referCode\":\"\",\"referChannelCode\":\"\",\"referChannelType\":\"\",\"fromWeChatApp\":false,\"bizType\":\"1\",\"v\":\"4.3\",\"chInfo\":\"ch_app_chsub_Photo\",\"from\":\"hjb_app_xbb\",\"actId\":\"1\",\"longitude\":\"120.22057268768549\",\"latitude\":\"30.17862595617771\"}"
+  };
 
-  var _0x5ea933"data="encodeURIComponent(stringify())
+  var _0x5ea933 = "data=" + encodeURIComponent(JSON.stringify(_0x5f17d6));
 
-  const _0x3f65eagetToken()
-        _0x59ecd8split("_")[0]
+  const _0x3f65ea = getToken(_0x44fa34),
+        _0x59ecd8 = _0x3f65ea.split("_")[0];
 
-  const _0x3e43dawait sign("&""""stringify())
+  const _0x3e43d = await sign(_0x59ecd8 + "&" + _0x9900e7 + "&" + _0x4ae8f4 + "&" + JSON.stringify(_0x5f17d6), kami);
 
-  const _0x5f2fe9{
-"https://mtop.ele.me/h5/mtop.alibaba.o2o.alsc.union.coupon.track/1.0/?jsv=2.6.1&appKey=12574478&&ttid=1601274958480%40eleme_android_10.14.3&t=""&sign=""&api=mtop.alibaba.o2o.alsc.union.coupon.track"
-"POST"
-    headers
-    body
-  }
-  return tryCatchPromise({
-    request(async (){
-      if () {
+  const _0x5f2fe9 = {
+    url: "https://mtop.ele.me/h5/mtop.alibaba.o2o.alsc.union.coupon.track/1.0/?jsv=2.6.1&appKey=12574478&&ttid=1601274958480%40eleme_android_10.14.3&t=" + _0x9900e7 + "&sign=" + _0x3e43d + "&api=mtop.alibaba.o2o.alsc.union.coupon.track",
+    method: "POST",
+    headers: _0x51fd6d,
+    body: _0x5ea933
+  };
+  return tryCatchPromise(_0x3646fc => {
+    request(_0x5f2fe9, async (_0x540129, _0x40bcb1, _0x52637b) => {
+      if (!_0x540129 && _0x40bcb1.statusCode == 200) {
         try {
-          const()
+          const _0x6c9838 = JSON.parse(_0x52637b);
 
-          _0x3646fc()
+          _0x3646fc(_0x6c9838);
         } catch (_0x53998e) {
-log()
+          console.log(_0x53998e);
 
-          _0x3646fc(null)
+          _0x3646fc(null);
         }
       } else {
-        _0x3646fc(null)
+        _0x3646fc(null);
       }
     });
   });
